@@ -15,14 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kbo-FD-OoH">
-                                <rect key="frame" x="20" y="44" width="374" height="279"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbo-FD-OoH">
+                                <rect key="frame" x="20" y="94" width="374" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brasília" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMe-dJ-hdj">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="279"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -38,17 +37,97 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="DHx-VE-ZJY"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="oPg-en-s9Y" appends="YES" id="Wlc-N0-iEZ"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVH-ce-wVJ">
+                                <rect key="frame" x="82" y="426" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="P5N-Gg-NtC"/>
+                                    <constraint firstAttribute="height" constant="50" id="u2g-z1-kRZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Porto Alegre">
+                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQM-TW-l14">
+                                <rect key="frame" x="82" y="492" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Wa-EK-2Lc"/>
+                                    <constraint firstAttribute="width" constant="250" id="TNU-nA-Hv9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Sao Paulo">
+                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wD-H1-0Na">
+                                <rect key="frame" x="82" y="558" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Wi6-jw-IVs"/>
+                                    <constraint firstAttribute="height" constant="50" id="cyR-oF-IgL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Brasília">
+                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eo1-xJ-TJB">
+                                <rect key="frame" x="82" y="624" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Iyz-ee-Pf1"/>
+                                    <constraint firstAttribute="height" constant="50" id="t3x-n7-gPF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Rio de Janeiro">
+                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4T-ue-LSv">
+                                <rect key="frame" x="182" y="780" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="C3N-kL-CJT"/>
+                                    <constraint firstAttribute="height" constant="50" id="EDN-P7-nia"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0vA-lJ-uVx" kind="presentation" id="YzM-wQ-WKJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BVH-ce-wVJ" firstAttribute="top" secondItem="kbo-FD-OoH" secondAttribute="bottom" constant="32" id="2tb-oe-nDS"/>
+                            <constraint firstItem="2wD-H1-0Na" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="50C-JL-GWg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q4T-ue-LSv" secondAttribute="bottom" constant="32" id="DsZ-5R-S0K"/>
+                            <constraint firstItem="kbo-FD-OoH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HL2-6o-yvN"/>
+                            <constraint firstItem="kbo-FD-OoH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="IdE-9j-NN6"/>
+                            <constraint firstItem="BVH-ce-wVJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JKB-ix-E76"/>
+                            <constraint firstItem="fQM-TW-l14" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UjQ-wX-dNZ"/>
+                            <constraint firstItem="fQM-TW-l14" firstAttribute="top" secondItem="BVH-ce-wVJ" secondAttribute="bottom" constant="16" id="d9g-12-s8y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kbo-FD-OoH" secondAttribute="trailing" constant="20" id="ddD-mZ-wxN"/>
+                            <constraint firstItem="eo1-xJ-TJB" firstAttribute="top" secondItem="2wD-H1-0Na" secondAttribute="bottom" constant="16" id="kmz-P0-IdE"/>
+                            <constraint firstItem="2wD-H1-0Na" firstAttribute="top" secondItem="fQM-TW-l14" secondAttribute="bottom" constant="16" id="kpe-oT-J8L"/>
+                            <constraint firstItem="eo1-xJ-TJB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vJ2-NL-ghn"/>
+                            <constraint firstItem="q4T-ue-LSv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="z47-rL-aPI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="IMe-dJ-hdj" id="mQT-oF-0Ck"/>
                         <outlet property="questionLabel" destination="NQI-1f-yLb" id="WQD-xf-LRd"/>
+                        <outletCollection property="optionButtons" destination="BVH-ce-wVJ" collectionClass="NSMutableArray" id="vFf-au-pXu"/>
+                        <outletCollection property="optionButtons" destination="fQM-TW-l14" collectionClass="NSMutableArray" id="ZT0-vb-PWh"/>
+                        <outletCollection property="optionButtons" destination="2wD-H1-0Na" collectionClass="NSMutableArray" id="P2A-jh-TOC"/>
+                        <outletCollection property="optionButtons" destination="eo1-xJ-TJB" collectionClass="NSMutableArray" id="j2I-kq-Ajb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -59,6 +138,71 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="103.79464285714285"/>
+        </scene>
+        <!--CreationVC-->
+        <scene sceneID="57k-J0-Epv">
+            <objects>
+                <viewController id="iQn-UR-8OR" customClass="CreationVC" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n9y-V5-Roc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dIj-3v-8fn">
+                                <rect key="frame" x="20" y="172" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RH8-cF-se9">
+                                <rect key="frame" x="20" y="262" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oGA-i5-zBq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FsP-jn-vzM">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ZmV-3Y-b7p">
+                            <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="iQn-UR-8OR" id="tum-PY-3m7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="uh6-fj-w5M">
+                            <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="didTapOnDone:" destination="iQn-UR-8OR" id="vPa-v3-lNo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="RH8-cF-se9" id="0Jp-Rr-dQM"/>
+                        <outlet property="questionTextField" destination="dIj-3v-8fn" id="ngg-Ug-Nzp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lwA-uD-Bec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878.2608695652175" y="103.79464285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vUZ-Ut-SBI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0vA-lJ-uVx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uEk-EK-Amb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iQn-UR-8OR" kind="relationship" relationship="rootViewController" id="RGh-Wo-uku"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAb-xW-Tny" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.11594202898561" y="103.79464285714285"/>
         </scene>
     </scenes>
 </document>
