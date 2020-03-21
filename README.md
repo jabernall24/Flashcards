@@ -4,9 +4,25 @@
 Allows user to create flashcards to study!
 
 ### App Walk-though
-<img src="https://imgur.com/hR7IG0v.gif" width=200><br>
+<img src="https://imgur.com/3hFwkV4.gif" width=200><br>
+## Lab 4
+
+## Required
+- [x] User should see the app icon 
+- [x] User should see a splash screen
+- [x] User should see an flip animation when revealing the answer
+- [x] User should see a slide animation when going to the next flashcard
+- [x] User should see a slide animation when going to the previous flashcard
+- [x] Push code to GitHub
+## Optional
+- [x] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
+- [x] User should see all views properly layout when using the app on a phone of different sizes
+- [x] Correct answer in multiple choice should be random
 
 ## Lab 3
+
+### App Walk-though
+<img src="https://imgur.com/hR7IG0v.gif" width=200><br>
 
 ## Required
 - [x] User can browse through multiple flashcards

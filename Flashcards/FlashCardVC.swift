@@ -11,11 +11,14 @@ import AudioToolbox
 
 class FlashCardVC: UIViewController {
     
+    enum Animate { case left, right }
+    
     @IBOutlet var answerLabel: UILabel!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var optionButtons: [UIButton]!
     @IBOutlet var prevButton: UIButton!
     @IBOutlet var nextButton: UIButton!
+    @IBOutlet var card: UIView!
     
     var flashcards: [Flashcard] = []
     var currentIndex = 0
@@ -36,35 +39,57 @@ class FlashCardVC: UIViewController {
         }
     }
     
+    private func animateCardIn(to direction: Animate) {
+        let translate: CGFloat = direction == .left ? -300 : 300
+        card.transform = CGAffineTransform.identity.translatedBy(x: translate, y: 0)
+        
+        UIView.animate(withDuration: 0.3) { self.card.transform = .identity }
+    }
+    
+    private func animateCardOut(to direction: Animate) {
+        let translate: CGFloat = direction == .right ? -300 : 300
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: translate, y: 0)
+        }, completion: { _ in
+            self.updateLabels()
+            self.animateCardIn(to: direction)
+        })
+    }
+    
+    private func flipFlashcard() {
+        UIView.transition(with: card, duration: 0.5, options: .transitionFlipFromRight, animations: {
+            self.questionLabel.isHidden = !self.questionLabel.isHidden
+        })
+    }
     
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        questionLabel.isHidden = !questionLabel.isHidden
+        flipFlashcard()
     }
     
     
     @IBAction func didTapOnPrev(_ sender: Any) {
         currentIndex -= 1
-        updateLabels()
         updateNextAndPrevButtons()
         questionLabel.isHidden = false
         updateButtons()
+        animateCardOut(to: .left)
     }
     
     
     @IBAction func didTapOnNext(_ sender: Any) {
         currentIndex += 1
-        updateLabels()
         updateNextAndPrevButtons()
         questionLabel.isHidden = false
         updateButtons()
+        animateCardOut(to: .right)
     }
     
     
     @IBAction func onDidTapOption(_ sender: UIButton) {
         if sender.title(for: .normal) == flashcards[currentIndex].answer {
-            UIView.animate(withDuration: 0.25) {
+            self.flipFlashcard()
+            UIView.animate(withDuration: 0.3) {
                 sender.backgroundColor = .systemYellow
-                self.questionLabel.isHidden = true
             }
         } else {
             UIView.animate(withDuration: 0.5) {
@@ -148,8 +173,8 @@ class FlashCardVC: UIViewController {
         nextButton.isEnabled = currentIndex != flashcards.count - 1
         prevButton.isEnabled = currentIndex != 0
         
-        nextButton.setTitleColor(nextButton.isEnabled ? .systemIndigo : .systemGray, for: .normal)
-        prevButton.setTitleColor(prevButton.isEnabled ? .systemIndigo : .systemGray, for: .normal)
+        nextButton.setTitleColor(nextButton.isEnabled ? .systemTeal : .systemGray, for: .normal)
+        prevButton.setTitleColor(prevButton.isEnabled ? .systemTeal : .systemGray, for: .normal)
     }
     
     
@@ -162,7 +187,7 @@ class FlashCardVC: UIViewController {
         
         optionButtons.forEach({
             $0.layer.cornerRadius = 10
-            $0.layer.borderColor = UIColor.systemIndigo.cgColor
+            $0.layer.borderColor = UIColor.systemTeal.cgColor
             $0.layer.borderWidth = 2
         })
     }
